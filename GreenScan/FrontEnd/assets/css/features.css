@@ -1,0 +1,53 @@
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+/* Striped Rows */
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effects */
+tbody tr:hover {
+    background-color: #e6e6e6;
+}
+
+/* Tooltip Styling */
+td[data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 1;
+    transform: translateX(-50%);
+    margin-top: -30px;
+    pointer-events: none;
+}
+
+td[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    table, th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
